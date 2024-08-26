@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './Header';
+import About from './About';
+import Projects from './Projects';
+import Contact from './Contact';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <section id="home" style={styles.home}>
+        <h1>Welcome to My Portfolio</h1>
+        <p>I'm Yohannes Tarekegn, a MERN stack developer passionate about building innovative solutions.</p>
+      </section>
+      <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }
 
+const styles = {
+  home: {
+    height: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
+    backgroundColor: '#f5f5f5',
+  },
+};
+
 export default App;
+
+
+
+
